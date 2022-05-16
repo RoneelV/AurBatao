@@ -1,0 +1,379 @@
+body {
+  background-color: #f4f7f6 !important;
+  /* margin-top: 20px !important; */
+  font-family: "Poppins", sans-serif;
+}
+.card {
+  background: #fff !important;
+  transition: 0.5s;
+  border: 0;
+  /* margin-bottom: 30px; */
+  border-radius: 0.55rem;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+}
+.chat-app .people-list {
+  width: 280px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* padding: 20px; */
+  z-index: 7;
+}
+
+.chat-app .chat {
+  margin-left: 280px;
+  border-left: 1px solid #eaeaea;
+}
+
+.people-list {
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.people-list .chat-list {
+  height: 90vh;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+.people-list .chat-list li {
+  /* padding: 10px 15px; */
+  list-style: none;
+  border-radius: 3px;
+  padding: 10px 5px 10px 10px;
+  margin-bottom: 10px;
+}
+
+/* hover except 1st child */
+
+.people-list .chat-list li:hover:not(:first-child) {
+  background: #efefef;
+  cursor: pointer;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.people-list .chat-list li.active {
+  background: #efefef;
+}
+
+.people-list .chat-list li .name {
+  font-size: 15px;
+}
+
+.people-list .chat-list img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.people-list img {
+  float: left;
+  border-radius: 50%;
+}
+
+.people-list .about {
+  float: left;
+  padding-left: 8px;
+  max-width: 75%;
+}
+
+.people-list .status {
+  color: #999;
+  font-size: 13px;
+}
+
+.chat .chat-header {
+  padding: 15px 20px;
+  border-bottom: 2px solid #f4f7f6;
+}
+
+.chat .chat-header img {
+  float: left;
+  border-radius: 40px;
+  width: 40px;
+}
+
+.chat .chat-header .chat-about {
+  float: left;
+  padding-left: 10px;
+}
+
+.chat .chat-history {
+  padding: 20px;
+  border-bottom: 2px solid #fff;
+}
+
+.chat .chat-history ul {
+  padding: 0;
+}
+
+.chat .chat-history ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.chat .chat-history ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.chat .chat-history .message-data {
+  margin-bottom: 15px;
+}
+
+.chat .chat-history .message-data img {
+  border-radius: 40px;
+  width: 40px;
+}
+
+.chat .chat-history .message-data-time {
+  font-size: 11px;
+  color: #434651;
+}
+
+.chat .chat-history .message {
+  color: #444;
+  padding: 9px 6px 4px 9px;
+  line-height: 20px;
+  font-size: 16px;
+  border-radius: 8px 8px 0 8px;
+  display: inline-block;
+  position: relative;
+}
+
+.chat .chat-history .message .emptyspan {
+  width: 75px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.chat .chat-history .my-message .emptyspan {
+  width: 55px;
+}
+
+.chat .chat-history .my-message {
+  background: #ffedd8;
+  border-radius: 8px 8px 8px 0;
+}
+
+.chat .chat-history .other-message {
+  background: #e7bc91;
+  /* text-align: right; */
+}
+
+.chat .chat-history .other-message:after {
+  border-bottom-color: #e8f1f3;
+  left: 80%;
+}
+
+.chat .chat-message {
+  padding: 20px;
+}
+
+.online,
+.offline,
+.me {
+  margin-right: 2px;
+  font-size: 8px;
+  vertical-align: middle;
+}
+
+.online {
+  color: #86c541;
+}
+
+.offline {
+  color: #e47297;
+}
+
+.me {
+  color: #1d8ecd;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .chat-app .people-list {
+    height: 465px;
+    width: 100%;
+    overflow-x: auto;
+    background: #fff;
+    left: -400px;
+    display: none;
+  }
+  .chat-app .people-list.open {
+    left: 0;
+  }
+  .chat-app .chat {
+    margin: 0;
+  }
+  .chat-app .chat .chat-header {
+    border-radius: 0.55rem 0.55rem 0 0;
+  }
+  .chat-app .chat-history {
+    height: 300px;
+    overflow-x: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .chat-app .chat-list {
+    height: 500px;
+    overflow-x: auto;
+  }
+  .chat-app .chat-history {
+    height: 600px;
+    overflow-x: auto;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .chat-app .chat-list {
+    height: 480px;
+    overflow-x: auto;
+  }
+  .chat-app .chat-history {
+    height: calc(100vh - 350px);
+    overflow-x: auto;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.chat-history {
+  height: 70vh !important;
+  overflow-y: scroll !important;
+  scrollbar-width: thin;
+}
+
+.app-header {
+  position: absolute;
+  top: 25%;
+  /* background-color: #121212; */
+  width: 100%;
+  padding: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.app-signin-container {
+  background: url("/public/Desktop\ -\ 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+.app-header {
+  color: #fff;
+  position: absolute;
+}
+
+.app-header h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.app-header img {
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.app-header p {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.app-footer {
+  position: absolute;
+  bottom: 0px;
+  background-color: #121212;
+  width: 100%;
+  color: white;
+  padding: 10px;
+}
+
+.app-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+i.fa.fa-sign-out {
+  font-size: 25px;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+i.fa.fa-sign-out:hover {
+  color: red;
+  transform: scale(1.2);
+  transition-duration: 0.25s;
+  cursor: pointer;
+}
+
+.user-head-li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #efefef !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  border-bottom-right-radius: 60px !important;
+}
+
+.app-signin-container button.btn-light {
+  box-shadow: 1px -1px 35px -5px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 1px -1px 35px -5px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 1px -1px 35px -5px rgba(255, 255, 255, 0.75);
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #efefef;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1d8ecd;
+}
+
+.mb-n1 {
+  margin-bottom: -6px;
+}
+
+.app-logo-front {
+  color: #e7bc91;
+  font-family: "Poppins", sans-serif;
+}
