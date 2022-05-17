@@ -1,6 +1,35 @@
 # AurBatao
 
+AurBatao! is a realtime chat application.
+
+**Team**: Roneel Valambhia, Aniruddh Muley, Yash Chaudhari, Akshat Bhayani, Arjun Majithiya, Ronels Macwan
+
 To develope locally, you will Firebase API keys and a couple more unique ids. So you need to provide them as the following environment variables: REACT_APP_FIREBASE_API_KEY, REACT_APP_FIREBASE_APP_ID, REACT_APP_DATABASE_URL, REACT_APP_SENDER_ID.
+
+## Firestore database structure
+
+- /messages
+  - [{chatID}]
+    - messages
+      - [{messageID}]
+        - message: string
+        - sender: string (name)
+        - sentBy: string (userID)
+        - status: string
+        - timestamp: timestamp
+- /users
+  - [{userID}]
+    - email: string
+    - name: string
+    - displayName: string
+    - isVerified: boolean
+    - avatarUrl: string
+- /pipeline (not implemented yet)
+  - [{userID}]
+    - sent
+      - [{uid}]
+        - chatID: string
+        - messageID: string
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -263,9 +263,6 @@ body {
 }
 
 .app-header {
-  position: absolute;
-  top: 25%;
-  /* background-color: #121212; */
   width: 100%;
   padding: 40px;
   justify-content: center;
@@ -283,11 +280,6 @@ body {
   top: 0px;
   left: 0px;
   z-index: -1;
-}
-
-.app-header {
-  color: #fff;
-  position: absolute;
 }
 
 .app-header h1 {
@@ -344,6 +336,7 @@ i.fa.fa-sign-out:hover {
 }
 
 .app-signin-container button.btn-light {
+  background: #fff;
   box-shadow: 1px -1px 35px -5px rgba(255, 255, 255, 0.75);
   -webkit-box-shadow: 1px -1px 35px -5px rgba(255, 255, 255, 0.75);
   -moz-box-shadow: 1px -1px 35px -5px rgba(255, 255, 255, 0.75);
@@ -375,5 +368,6 @@ i.fa.fa-sign-out:hover {
 
 .app-logo-front {
   color: #e7bc91;
+  background: #fff;
   font-family: "Poppins", sans-serif;
 }

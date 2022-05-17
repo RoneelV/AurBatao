@@ -21,9 +21,6 @@ const SignIn = () => {
 
   return (
     <div className="app-signin-container">
-      <div className="app-header">
-        <h1 className="app-logo-front">AURBATAO!</h1>
-      </div>
       <div
         style={{
           display: "flex",
@@ -34,6 +31,11 @@ const SignIn = () => {
           minHeight: "90vh",
         }}
       >
+        <div className="row">
+          <div className="app-header">
+            <h1 className="app-logo-front">AURBATAO!</h1>
+          </div>
+        </div>
         <div
           className="row"
           style={{ width: "100%", justifyContent: "center" }}
